@@ -103,6 +103,8 @@ class ViewModel: NSObject {
         
         
         
+        
+        
         self.seq++
         
         if self.seq <= self.maxCount {
