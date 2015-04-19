@@ -1,24 +1,22 @@
 //
 //  AppDelegate.swift
-//  AdSSPOptimazationLogic
+//  ReactiveSwift
 //
-//  Created by songwonje on 2015. 4. 18..
-//  Copyright (c) 2015년 songwonje. All rights reserved.
+//  Created by Yusef Napora on 6/10/14.
+//  Copyright (c) 2014 Yusef Napora. All rights reserved.
 //
 
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+                            
     var window: UIWindow?
 
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
         // Override point for customization after application launch.
-      
-      
-      return true
+        return true
     }
 
     func applicationWillResignActive(application: UIApplication) {
