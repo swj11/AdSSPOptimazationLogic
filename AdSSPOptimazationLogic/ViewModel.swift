@@ -24,7 +24,10 @@ class ViewModel: NSObject {
   dynamic var totalClick = 0
   dynamic var totalNoClick = 0
   
-  private var selectAdResult = [AnyObject]()
+//  private var selectAdResult = [AnyObject]()
+  
+  private var selectAdResult = NSMutableArray()
+  
   private var user = 0
   
   init(services: ViewModelServices) {
@@ -56,6 +59,18 @@ class ViewModel: NSObject {
   }
   
   
+  private func checkAlreadyClickedAdByUser(user: Int, adList: [AdRequestResultAd]) {
+  
+    self.selectAdResult.rac_sequence.filter { (any: AnyObject!) -> Bool in
+      
+      let result = any as! SelectAdResultResult
+      
+//      return result.user == user && contains(adList, result.name)
+      
+      return result.user == user
+      }
+  }
+  
   //MARK: Private
   private func adRequestCommandSignal(parameterDict: [String: String]) -> RACSignal {
     
@@ -69,6 +84,13 @@ class ViewModel: NSObject {
         println("first : \(results.adList?.first?.name), \(results.adList?.first?.bid)")
         
         if results.adList != nil {
+          
+          
+          // check 기존에 해당 user가 click한 광고 중 가장 cpc가 높은 광고
+          
+          // check 기존에 click이 발생한 광고 중 cpc가 높은 광고
+          
+          
           
           if let firstAd = results.adList?.first {
             
@@ -93,16 +115,16 @@ class ViewModel: NSObject {
         if result.status == 200 && result.result != nil {
           if result.result?.isClick == true {
             
-            self.selectAdResult.append(result.result!)
+//            self.selectAdResult.append(result.result!)
+            
+            self.selectAdResult.addObject(result.result!)
+            
             self.totalCPC += result.result!.cpc
             self.totalClick++
           } else {
             self.totalNoClick++
           }
         }
-        
-        
-        
         
         
         self.seq++
@@ -141,5 +163,6 @@ class ViewModel: NSObject {
     println("round : \(round) seq: \(numberFormatter.stringFromNumber(seq)!), total cpc: \(numberFormatter.stringFromNumber(self.totalCPC)!), total click : \(numberFormatter.stringFromNumber(self.totalClick)!), , total no click : \(numberFormatter.stringFromNumber(self.totalNoClick)!)")
     
   }
+  
   
 }

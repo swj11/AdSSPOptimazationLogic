@@ -30,19 +30,19 @@
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>2FD0F96481B39E576130E173BF6923CF52C91FF7</key>
-		<string>../..Externals/ReactiveSwift/ReactiveCocoa/external/specta/</string>
+		<string>../..Externals/ReactiveSwift/ReactiveCocoa/external/specta</string>
 		<key>3E7FFC75AB0D357F6607ADA6D490796CBFBDC309</key>
 		<string>../..</string>
 		<key>51B210D0D41486D3ADD6940D57E4480BBD4DE4C5</key>
-		<string>../..Externals/ReactiveSwift/ReactiveCocoa/</string>
+		<string>../..Externals/ReactiveSwift/ReactiveCocoa</string>
 		<key>56A22D0008216FDBF67562130F665AAA6D445518</key>
-		<string>../..Externals/ReactiveSwift/</string>
+		<string>../..Externals/ReactiveSwift</string>
 		<key>67620B5EFA902936DF04070AF595B76AB0333747</key>
-		<string>../..Externals/Alamofire/</string>
+		<string>../..Externals/Alamofire</string>
 		<key>8884BD3B878631A1500EC9895E6A3CF4CB0AB3DB</key>
-		<string>../..Externals/ReactiveSwift/ReactiveCocoa/external/expecta/</string>
+		<string>../..Externals/ReactiveSwift/ReactiveCocoa/external/expecta</string>
 		<key>E084C86B03F81D63323C9E7510697EA528A758C7</key>
-		<string>../..Externals/ReactiveSwift/ReactiveCocoa/external/xcconfigs/</string>
+		<string>../..Externals/ReactiveSwift/ReactiveCocoa/external/xcconfigs</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/swj11/AdSSPOptimazationLogic.git</string>
